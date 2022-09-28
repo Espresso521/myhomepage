@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `HU ZE's BLOG`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `HU ZE`,
+      summary: `Who lives and works in Tokyo building useful things.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Nice to meet you!`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `kotaku20220424`,
     },
   },
   plugins: [
