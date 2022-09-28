@@ -6,21 +6,17 @@
  */
 
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+import { Avatar } from '@mui/material'
 
 const Bio = () => {
 
   return (
     <div className="bio">
-      <StaticImage
+      <Avatar
         className="bio-avatar"
-        layout="constrained"
-        formats={["auto", "webp", "avif"]}
-        src="../images/myself.jpg"
-        width={100}
-        height={100}
-        quality={75}
-        alt="Profile picture"
+        alt="Profile Avatar"
+        src="/myself.jpg"
+        sx={{ width: 75, height: 75 }}
       />
 
       <p>
