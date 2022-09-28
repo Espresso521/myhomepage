@@ -1,10 +1,6 @@
 module.exports = {
   siteMetadata: {
     title: `Hu Ze's BLOG`,
-    author: {
-      name: `Hu Ze`,
-      summary: `Who lives and works in Tokyo.`,
-    },
     description: `Nice to meet you!`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {

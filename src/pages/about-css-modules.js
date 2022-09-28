@@ -2,7 +2,6 @@ import React from "react"
 
 import Container from "../components/container"
 import { Link } from "gatsby"
-import { page, link, header } from "../style/another-page.module.css"
 
 const aboutcssmodule = () => (
   <Container>

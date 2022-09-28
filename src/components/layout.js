@@ -9,14 +9,14 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <div>
+      <>
         <h1 className="main-heading">
           {title}
-          <Link className="blog-post-about-me" to="/aboutme">
-            AboutMe
-          </Link>
         </h1>
-      </div>
+        <Link className="blog-post-about-me" to="/aboutme">
+          AboutMe
+        </Link>
+      </>
     )
   } else {
     header = (
@@ -27,6 +27,7 @@ const Layout = ({ location, title, children }) => {
         <Link className="blog-post-about-me-blog" to="/aboutme">
           AboutMe
         </Link>
+        <hr />
       </>
     )
   }
@@ -35,7 +36,7 @@ const Layout = ({ location, title, children }) => {
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
       <main>{children}</main>
-      <footer>
+      <footer className="global-footer">
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>

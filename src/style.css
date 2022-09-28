@@ -256,9 +256,8 @@ a:focus {
   margin-bottom: var(--spacing-12);
 }
 
-.main-heading {
-  font-size: var(--fontSize-7);
-  margin: 0;
+.global-footer {
+  text-align: center;
 }
 
 .post-list-item {
@@ -343,12 +342,23 @@ a:focus {
   }
 }
 
+.main-heading {
+  font-size: var(--fontSize-5);
+  font-family: "Times New Roman";
+  margin: 0;
+  display: inline;
+}
+
 .blog-post-about-me {
   float: right;
-  font-size: var(--fontSize-4);
+  text-align: center;
+  font-size: var(--fontSize-2);
   color: var(--color-pink);
-  margin-bottom: var(--spacing-2);
-  margin-top: var(--spacing-0);
+  font-family: var(--font-heading);
+  font-weight: var(--fontWeight-bold);
+  text-decoration: none;
+  margin-top: 2px;
+  font-style: italic;
 }
 
 .blog-post-about-me-blog {

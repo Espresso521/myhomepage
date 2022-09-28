@@ -6,29 +6,9 @@
  */
 
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Bio = () => {
-  const data = useStaticQuery(graphql`
-    query BioQuery {
-      site {
-        siteMetadata {
-          author {
-            name
-            summary
-          }
-          social {
-            twitter
-          }
-        }
-      }
-    }
-  `)
-
-  // Set these values by editing "siteMetadata" in gatsby-config.js
-  const author = data.site.siteMetadata?.author
-  const social = data.site.siteMetadata?.social
 
   return (
     <div className="bio">
@@ -42,15 +22,15 @@ const Bio = () => {
         quality={75}
         alt="Profile picture"
       />
-      {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          <hr></hr>
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You can follow me on Twitter
-          </a>
-        </p>
-      )}
+
+      <p>
+        Written by <strong>Hu Ze</strong> who <i>lives</i> and <i>works</i> in <big>Tokyo</big>
+        <br></br>
+        <a href={`https://twitter.com/kotaku20220424`}>
+          You can follow me on Twitter
+        </a>
+      </p>
+
     </div>
   )
 }
