@@ -58,8 +58,10 @@
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
-  --color-heading-black: black;
+  --color-heading-black: #000000;
+  --color-heading-tea: #008080;
   --color-accent: #d1dce5;
+  --color-pink: #ff1493;
 }
 
 /* HTML elements */
@@ -120,7 +122,7 @@ h6 {
 h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
+  color: var(--color-heading-tea);
 }
 
 h2 {
@@ -286,6 +288,14 @@ a:focus {
   font-size: var(--fontSize-2);
 }
 
+.header-link-home-blog {
+  font-weight: var(--fontWeight-bold);
+  font-family: var(--font-heading);
+  text-decoration: none;
+  font-size: var(--fontSize-2);
+  color: var(--color-heading-tea);
+}
+
 .bio {
   display: flex;
   margin-bottom: var(--spacing-16);
@@ -293,6 +303,7 @@ a:focus {
 
 .bio p {
   margin-bottom: var(--spacing-0);
+  align-self: center;
 }
 
 .bio-avatar {
@@ -330,4 +341,22 @@ a:focus {
   ol {
     list-style-position: inside;
   }
+}
+
+.blog-post-about-me {
+  float: right;
+  font-size: var(--fontSize-4);
+  color: var(--color-pink);
+  margin-bottom: var(--spacing-2);
+  margin-top: var(--spacing-0);
+}
+
+.blog-post-about-me-blog {
+  float: right;
+  text-align: center;
+  font-size: var(--fontSize-2);
+  color: var(--color-pink);
+  font-family: var(--font-heading);
+  font-weight: var(--fontWeight-bold);
+  text-decoration: none;
 }
