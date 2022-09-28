@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
+  console.log("rootpath is " + rootPath + "; isRootPath is " + isRootPath + "; location.pathname is " + location.pathname)
   let header
 
   if (isRootPath) {

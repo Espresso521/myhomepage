@@ -4,7 +4,7 @@ import Container from "../components/container"
 import { Link } from "gatsby"
 import { page, link, header } from "../style/another-page.module.css"
 
-export default () => (
+const aboutcssmodule = () => (
   <Container>
     <h1>About CSS Modules</h1>
     <h2>About CSS Modules</h2>
@@ -16,3 +16,5 @@ export default () => (
     </Link>
   </Container>
 )
+
+export default aboutcssmodule
