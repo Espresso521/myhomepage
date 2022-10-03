@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `HU ZEのBlog`,
+    title: `Just do IT`,
     description: `Nice to meet you!`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
