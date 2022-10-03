@@ -7,7 +7,7 @@ import { Avatar } from '@mui/material'
 const about = () => (
   <div className="global-wrapper">
     <h3 className="about_link_home">
-      <Link to="/">HU ZEのBlog</Link>
+      <Link to="/">{'< Home'}</Link>
     </h3>
 
     <Divider>

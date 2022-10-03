@@ -7,13 +7,13 @@ const columns = [
     dataIndex: 'name',
     width: 88,
     key: 'name',
-    render: (text) => <i style={{ 'color': 'blue' }}>{text}</i>,
+    render: (text) => <i className='about_table_name_address'>{text}</i>,
   },
   {
     title: 'Address',
     dataIndex: 'address',
     key: 'address',
-    render: (text) => <i style={{ 'color': 'green' }}>{text}</i>,
+    render: (text) => <i className='about_table_name_address'>{text}</i>,
   },
   {
     title: 'Skills',
