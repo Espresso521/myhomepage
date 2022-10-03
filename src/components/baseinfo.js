@@ -1,5 +1,7 @@
 import React from 'react'
 import { Table, Tag } from 'antd'
+import { Avatar } from '@mui/material'
+import { Divider } from 'antd'
 
 const columns = [
   {
@@ -55,14 +57,23 @@ const data = [
     name: 'HU ZE',
     age: 39,
     address: 'Tokyo',
-    tags: ['GO', 'Java', 'Android', 'kotlin', 'AWS SAA', 'React', 'JLPT N2', 'SpringBoot', 'IRIS Core Solution'],
+    tags: ['GO', 'Java', 'Android', 'kotlin', 'AWS SAA', 'React',
+      'JLPT N2', 'SpringBoot', 'IRIS Core Develop', 'RTSP', 'MediaCodec', 'FFmpeg', 'H264', 'AAC', 'G711'],
   },
 ]
 
 const baseinfo = function baseinfo (props) {
   return (
     <div>
-      <div className="bio">
+      <Divider>
+        <Avatar
+          className="bio-avatar"
+          alt="Profile Avatar"
+          src="/myself.jpg"
+          sx={{ width: 75, height: 75 }}
+        />
+      </Divider>
+      <div style={{ 'display': 'flex' }}>
         <div style={{ 'marginTop': '5px' }}>
           <Table bordered columns={columns} dataSource={data} pagination={{
             position: ['none', 'none']
