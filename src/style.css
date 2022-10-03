@@ -385,3 +385,17 @@ a:focus {
   font-weight: var(--fontWeight-bold);
   color: var(--color-heading-tea);
 }
+
+.about_career_font {
+  font-size: var(--fontSize-4);
+  font-family: "Georgia";
+  font-weight: var(--fontWeight-bold);
+  color: #000080;
+}
+
+.about_career_timeline_font {
+  font-size: var(--fontSize-2);
+  font-family: "Georgia";
+  font-weight: var(--fontWeight-bold);
+  color: #1a0a78;
+}
