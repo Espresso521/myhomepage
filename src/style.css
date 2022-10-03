@@ -120,6 +120,7 @@ h6 {
 }
 
 h1 {
+  color: var(--color-heading-tea);
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
   color: var(--color-heading-tea);
@@ -347,6 +348,7 @@ a:focus {
   font-family: "Times New Roman";
   margin: 0;
   display: inline;
+  color: var(--color-heading-tea);
 }
 
 .blog-post-about-me {
@@ -369,4 +371,10 @@ a:focus {
   font-family: var(--font-heading);
   font-weight: var(--fontWeight-bold);
   text-decoration: none;
+}
+
+.about_link_home {
+  font-size: var(--fontSize-5);
+  font-family: "Times New Roman";
+  color: var(--color-heading-tea);
 }

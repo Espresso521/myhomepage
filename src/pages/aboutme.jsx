@@ -1,13 +1,26 @@
 import React from "react"
 import { Link } from "gatsby"
-import Header from "../components/header"
+import { Divider } from 'antd'
+import BaseInfo from '../components/baseinfo'
+import { Avatar } from '@mui/material'
 
 const about = () => (
-  <div style={{ color: `teal` }}>
-    <Link to="/">Home</Link>
-    <Header headerText="About Gatsby" />
-    <Header headerText="It's pretty cool" />
-    <p>Such wow. Very React.</p>
+  <div className="global-wrapper">
+    <h3 className="about_link_home">
+      <Link to="/">HU ZEのBlog</Link>
+    </h3>
+
+    <Divider>
+      <Avatar
+        className="bio-avatar"
+        alt="Profile Avatar"
+        src="/myself.jpg"
+        sx={{ width: 75, height: 75 }}
+      />
+    </Divider>
+
+    <BaseInfo />
+
   </div>
 )
 
