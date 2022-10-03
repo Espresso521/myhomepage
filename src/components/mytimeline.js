@@ -16,10 +16,10 @@ function mytimeline () {
         <span className="about_career_font">Career</span>
       </Divider>
       <Timeline mode={'right'}>
-        <Timeline.Item label="Now" dot={<HeartOutlined />}>Adventure Continue</Timeline.Item>
+        <Timeline.Item label="Now" color="red" dot={<HeartOutlined />}>Just do IT</Timeline.Item>
         <Timeline.Item label="2022-05" dot={<LaptopOutlined />}>Join Servicememe</Timeline.Item>
         <Timeline.Item label="2022-04" dot={<RocketOutlined />}>Arrive Tokyo</Timeline.Item>
-        <Timeline.Item dot={<SyncOutlined spin />}>...</Timeline.Item>
+        <Timeline.Item color="green" dot={<SyncOutlined spin />}>...</Timeline.Item>
         <Timeline.Item label="2012-03" dot={<LaptopOutlined />}>Join VIA Tech</Timeline.Item>
         <Timeline.Item color="blue" label="2012-03" dot={<HomeOutlined />}>
           <Tooltip placement="topLeft" title="HUST === Huazhong University of Science and Technology" color={'cyan'} key={'cyan'}>

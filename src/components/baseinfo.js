@@ -12,9 +12,9 @@ const columns = [
     render: (text) => <i className='about_table_name_address'>{text}</i>,
   },
   {
-    title: 'Address',
-    dataIndex: 'address',
-    key: 'address',
+    title: 'Education',
+    dataIndex: 'education',
+    key: 'education',
     render: (text) => <i className='about_table_name_address'>{text}</i>,
   },
   {
@@ -57,6 +57,7 @@ const data = [
     name: 'HU ZE',
     age: 39,
     address: 'Tokyo',
+    education: 'Master',
     tags: ['GO', 'Java', 'Android', 'kotlin', 'AWS SAA', 'React',
       'JLPT N2', 'SpringBoot', 'IRIS Core Develop', 'RTSP', 'MediaCodec', 'FFmpeg', 'H264', 'AAC', 'G711'],
   },
@@ -75,7 +76,7 @@ const baseinfo = function baseinfo (props) {
       </Divider>
       <div style={{ 'display': 'flex' }}>
         <div style={{ 'marginTop': '5px' }}>
-          <Table bordered columns={columns} dataSource={data} pagination={{
+          <Table bordered columns={columns} dataSource={data} size="small" pagination={{
             position: ['none', 'none']
           }} />
         </div>
