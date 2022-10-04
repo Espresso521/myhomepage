@@ -1,12 +1,6 @@
 import React from 'react'
 import { Divider, Image } from 'antd'
 
-const contentStyle = {
-  lineHeight: '160px',
-  textAlign: 'center',
-  background: '#364d79',
-}
-
 function certification () {
   return (
     <div>
