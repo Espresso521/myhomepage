@@ -6,19 +6,18 @@
  */
 
 import * as React from "react"
-import { Avatar } from '@mui/material'
+import { Avatar } from 'antd'
 
 const Bio = () => {
 
   return (
     <div className="bio">
       <Avatar
-        className="bio-avatar"
+        style={{ 'marginRight': '10px' }}
         alt="Profile Avatar"
         src="/myself.jpg"
-        sx={{ width: 75, height: 75 }}
+        size={75}
       />
-
       <p>
         Written by <strong>Hu Ze</strong> who <i>lives</i> and <i>works</i> in <big>Tokyo</big>
         <br></br>

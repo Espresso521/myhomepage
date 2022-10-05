@@ -1,7 +1,6 @@
 import React from 'react'
 import { Table, Tag } from 'antd'
-import { Avatar } from '@mui/material'
-import { Divider } from 'antd'
+import { Divider, Avatar, BackTop } from 'antd'
 
 const columns = [
   {
@@ -66,12 +65,12 @@ const data = [
 const baseinfo = function baseinfo (props) {
   return (
     <div>
+      <BackTop />
       <Divider>
         <Avatar
-          className="bio-avatar"
           alt="Profile Avatar"
           src="/myself.jpg"
-          sx={{ width: 75, height: 75 }}
+          size={60}
         />
       </Divider>
       <div style={{ 'display': 'flex' }}>

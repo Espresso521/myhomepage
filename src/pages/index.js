@@ -5,6 +5,9 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Divider } from 'antd'
+import {
+  BookTwoTone,
+} from '@ant-design/icons'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -40,7 +43,7 @@ const BlogIndex = ({ data, location }) => {
                 <header>
                   <h2>
                     <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
+                      <span itemProp="headline"><BookTwoTone style={{ 'marginRight': '10px' }} />{title}</span>
                     </Link>
                   </h2>
                   <small style={{ 'fontStyle': 'italic' }}>{post.frontmatter.date}</small>
