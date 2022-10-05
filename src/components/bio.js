@@ -22,9 +22,9 @@ const Bio = () => {
       <p>
         Written by <strong>Hu Ze</strong> who <i>lives</i> and <i>works</i> in <big>Tokyo</big>
         <br></br>
-        <a href={`https://twitter.com/kotaku20220424`}>
-          You can follow me on Twitter
-        </a>
+        <span>
+          <i>You can contact me:</i> <a href="mailto:kotaku20220424@gmail.com">kotaku20220424@gmail.com</a>
+        </span>
       </p>
 
     </div>
