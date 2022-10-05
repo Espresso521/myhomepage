@@ -4,7 +4,7 @@ date: "2022-10-01"
 description: " 人間は一人で生きて、一人で死んでいく。で、どうする？"
 ---
 
-## [ビートたけし](https://ja.wikipedia.org/wiki/%E3%83%93%E3%83%BC%E3%83%88%E3%81%9F%E3%81%91%E3%81%97)
+> - [ビートたけし](https://ja.wikipedia.org/wiki/%E3%83%93%E3%83%BC%E3%83%88%E3%81%9F%E3%81%91%E3%81%97)
 
 ![ビートたけし](./takesi.jpeg)
 
