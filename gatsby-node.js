@@ -58,9 +58,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 }
 
+// create your defined node here
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
+  // use node.internal.type to filter your own node
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
 

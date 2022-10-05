@@ -4,9 +4,9 @@ date: "2022-10-05"
 description: "I create my blog by Gatsby. Gatsby enables developers to build fast, secure, and powerful websites using a React-based framework."
 ---
 
-## Gatsby - The future of web development
+### Gatsby - The future of web development
 
-Gatsby enables developers to build fast, secure, and powerful websites using a React-based framework and innovative data layer that makes integrating different content, APIs, and services into one web experience incredibly simple.
+**Gatsby** enables developers to build fast, secure, and powerful websites using a _React-based framework_ and innovative data layer that makes integrating different content, APIs, and services into one web experience incredibly simple.
 
 ##### You can get more information from **_[Gatsby](https://www.gatsbyjs.com/)_**
 
