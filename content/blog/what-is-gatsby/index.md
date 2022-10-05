@@ -1,7 +1,7 @@
 ---
 title: Hello Gatsby
 date: "2022-10-05"
-description: "I create my blog by Gatsby. Gatsby enables developers to build fast, secure, and powerful websites using a React-based framework."
+description: "I create this blog by Gatsby. Gatsby enables developers to build fast, secure, and powerful websites using a React-based framework."
 ---
 
 ### Gatsby - The future of web development
