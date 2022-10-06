@@ -1,7 +1,7 @@
 ---
-title: Use AWS S3+CloudFront to deploy this blog
+title: AWS S3+CloudFront Deploy
 date: "2022-10-06"
-description: "I try to use AWS S3+CloudFront to deploy this blog. Success!"
+description: "I try to use AWS S3+CloudFront to deploy this blog."
 ---
 
 I had thought it would be easy to implement the deployment of the blog using S3+CloundFront.

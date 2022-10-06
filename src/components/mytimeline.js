@@ -28,10 +28,10 @@ function mytimeline () {
         </Timeline.Item>
         <Timeline.Item color="#DAA520" label="2009-06" dot={<HomeOutlined />}>
           <Tooltip placement="topLeft" title="HUST === Huazhong University of Science and Technology" color={'cyan'} key={'cyan'}>
-            Bahelor Graduated from HUST
+            Bachelor Graduated from HUST
           </Tooltip>
         </Timeline.Item>
-        <Timeline.Item label="1983-05" color="#00CCFF" dot={<SmileOutlined />}>I was born</Timeline.Item>
+        <Timeline.Item label="1983-05" color="#00CCFF" dot={<SmileOutlined />}>Born</Timeline.Item>
       </Timeline>
     </div>
   )

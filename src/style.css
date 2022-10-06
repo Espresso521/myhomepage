@@ -354,13 +354,13 @@ a:focus {
 .blog-post-about-me {
   float: right;
   text-align: center;
-  font-size: var(--fontSize-2);
   color: var(--color-pink);
-  font-family: var(--font-heading);
-  font-weight: var(--fontWeight-bold);
   text-decoration: none;
-  margin-top: 2px;
-  font-style: italic;
+  margin-top: 10px;
+  margin-right: 50px;
+  font: 150 25px "Comic Sans MS";
+  text-shadow: 0px 0px 20px yellow, 0px 0px 10px orange, 0px 0px 10px orangered,
+    0px 0px 10px red;
 }
 
 .blog-post-about-me-blog {
@@ -375,7 +375,7 @@ a:focus {
 
 .about_link_home {
   font-size: var(--fontSize-5);
-  font-family: "Times New Roman";
+  font-family: "Goudy Bookletter 1911";
   color: var(--color-heading-tea);
 }
 
@@ -398,4 +398,12 @@ a:focus {
   font-family: "Georgia";
   font-weight: var(--fontWeight-bold);
   color: #1a0a78;
+}
+
+.home_title_art {
+  font: 200 40px "Comic Sans MS";
+  color: #008080;
+  text-shadow: 0 0 20px #fdec84, 10px -10px 30px #ffae35,
+    20px -20px 40px #ec760c, -20px -60px 50px #cd4607, 0px -80px 60px #973717,
+    10px -40px 70px #451b0e;
 }
