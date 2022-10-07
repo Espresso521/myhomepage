@@ -25,7 +25,7 @@ Pay attention to [Async vs. sync work](https://www.gatsbyjs.com/docs/reference/c
       })
     }
 
-> #### 2. Create a IAM user to do upload work
+> #### 2. Create an IAM user to do upload work
 
 Use the **Access key ID** and **Secret access key** to construct S3 object, then you can use this S3 object to putObject.
 

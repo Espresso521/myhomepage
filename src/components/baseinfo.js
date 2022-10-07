@@ -110,7 +110,7 @@ const baseinfo = function baseinfo (props) {
       </Divider>
       <div style={{ 'display': 'flex' }}>
         <div style={{ 'marginTop': '5px' }}>
-          <Table bordered columns={columns} dataSource={data} size="large" pagination={{
+          <Table bordered columns={columns} dataSource={data} size="small" pagination={{
             position: ['none', 'none']
           }} />
         </div>
