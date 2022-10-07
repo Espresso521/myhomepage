@@ -357,7 +357,7 @@ a:focus {
   color: var(--color-pink);
   text-decoration: none;
   margin-top: 10px;
-  margin-right: 50px;
+  margin-right: 5px;
   font: 150 25px "Comic Sans MS";
   text-shadow: 0px 0px 20px yellow, 0px 0px 10px orange, 0px 0px 10px orangered,
     0px 0px 10px red;
@@ -405,5 +405,11 @@ a:focus {
   color: #008080;
   text-shadow: 0 0 20px #fdec84, 10px -10px 30px #ffae35,
     20px -20px 40px #ec760c, -20px -60px 50px #cd4607, 0px -80px 60px #973717,
-    10px -40px 70px #451b0e;
+    10px -40px 70px #451b0e, 10px 20px 30px #110f0c;
+}
+
+.hitech {
+  font: 500 45px/45px "Comic Sans MS";
+  color: #008080;
+  text-shadow: 0 -1px 0 #0cf, 0 1px 0 #00c, 0 0 12px #09f;
 }

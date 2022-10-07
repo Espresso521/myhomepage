@@ -1,30 +1,46 @@
 import React from 'react'
 import { Table, Tag } from 'antd'
 import { Divider, Avatar, BackTop } from 'antd'
+import {
+  AudioTwoTone,
+  AndroidOutlined,
+  AmazonOutlined,
+  Html5TwoTone,
+  CustomerServiceTwoTone,
+  VideoCameraTwoTone,
+  MessageTwoTone,
+  IeOutlined,
+  SoundTwoTone,
+} from '@ant-design/icons'
 
 const columns = [
   {
-    title: 'Name',
-    dataIndex: 'name',
-    width: 88,
-    key: 'name',
-    render: (text) => <i className='about_table_name_address'>{text}</i>,
+    title: <MessageTwoTone />,
+    key: 'languages',
+    dataIndex: 'languages',
+
+    render: (_, { languages }) => (
+      <>
+        {languages.map((lang) => {
+          let color = 'pink'
+          return (
+            <Tag color={color} key={lang}>
+              {lang}
+            </Tag>
+          )
+        })}
+      </>
+    ),
   },
   {
-    title: 'Education',
-    dataIndex: 'education',
-    key: 'education',
-    render: (text) => <i className='about_table_name_address'>{text}</i>,
-  },
-  {
-    title: 'Skills',
+    title: <><IeOutlined style={{ 'color': 'blue' }} /><AmazonOutlined style={{ 'color': '#DAA520' }} /><Html5TwoTone /><AndroidOutlined style={{ 'color': 'green' }} /></>,
     key: 'tags',
     dataIndex: 'tags',
     render: (_, { tags }) => (
       <>
         {tags.map((tag) => {
-          let color
-          if (tag.length === 2) {
+          let color = 'geekblue'
+          {/* if (tag.length === 2) {
             color = 'purple'
           } else if (tag.length === 3) {
             color = 'blue'
@@ -38,11 +54,29 @@ const columns = [
             color = 'pink'
           } else {
             color = 'red'
-          }
+          } */}
 
           return (
             <Tag color={color} key={tag}>
-              {tag.toUpperCase()}
+              {tag}
+            </Tag>
+          )
+        })}
+      </>
+    ),
+  },
+  {
+    title: <><AudioTwoTone /><SoundTwoTone /><CustomerServiceTwoTone /><VideoCameraTwoTone /></>,
+    key: 'technicals',
+    dataIndex: 'technicals',
+
+    render: (_, { technicals }) => (
+      <>
+        {technicals.map((tech) => {
+          let color = 'purple'
+          return (
+            <Tag color={color} key={tech}>
+              {tech}
             </Tag>
           )
         })}
@@ -57,8 +91,9 @@ const data = [
     age: 39,
     address: 'Tokyo',
     education: 'Master',
-    tags: ['GO', 'Java', 'Android', 'kotlin', 'AWS SAA', 'React',
-      'JLPT N2', 'SpringBoot', 'IRIS Core Develop', 'RTSP', 'MediaCodec', 'FFmpeg', 'H264', 'AAC', 'G711'],
+    languages: ['Native Chinese', 'CET-6 English', 'N2 Japanese'],
+    tags: ['GO', 'Java', 'React', 'Kotlin', 'Android', 'AWS SAA', 'SpringBoot', 'IRIS Core Develop'],
+    technicals: ['SIP', 'RTP', 'H264', 'AAC', 'G711', 'RTSP', 'FFmpeg', 'MediaCodec'],
   },
 ]
 
@@ -75,7 +110,7 @@ const baseinfo = function baseinfo (props) {
       </Divider>
       <div style={{ 'display': 'flex' }}>
         <div style={{ 'marginTop': '5px' }}>
-          <Table bordered columns={columns} dataSource={data} size="small" pagination={{
+          <Table bordered columns={columns} dataSource={data} size="large" pagination={{
             position: ['none', 'none']
           }} />
         </div>

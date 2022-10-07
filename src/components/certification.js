@@ -12,19 +12,19 @@ function certification () {
         <Image
           width={250}
           height={250}
-          src="/aws.png"
+          src="/aws.jpg"
         />
 
         <Image
           width={250}
           height={250}
-          src="/iris.png"
+          src="/iris.jpg"
         />
 
         <Image
           width={250}
           height={250}
-          src="/n2.jpeg"
+          src="/n2.jpg"
         />
       </Image.PreviewGroup>
 
