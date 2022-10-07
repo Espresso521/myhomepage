@@ -1,5 +1,8 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const AWS = require("aws-sdk") // from AWS SDK
+const fs = require("fs")
+const mime = require("mime")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -114,4 +117,47 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String
     }
   `)
+}
+
+exports.onPostBuild = async function ({ reporter }) {
+  AWS.config.setPromisesDependency(Promise)
+  const folderPath = path.join(__dirname, "./public")
+  const filesPaths = await walkSync(folderPath)
+  if (filesPaths.length === 0) return
+  // create S3 Object
+  const s3 = new AWS.S3({
+    signatureVersion: 'v4',
+  })
+  for (let i = 0; i < filesPaths.length; i++) {
+    const statistics = `(${i + 1}/${filesPaths.length}, ${Math.round((i + 1) / filesPaths.length * 100)}%)`
+    const filePath = filesPaths[i]
+    const fileContent = fs.readFileSync(filePath)
+    // If the slash is like this "/" s3 will create a new folder, otherwise will not work properly.
+    const relativeToBaseFilePath = path.normalize(path.relative(folderPath, filePath))
+    const relativeToBaseFilePathForS3 = relativeToBaseFilePath.split(path.sep).join('/')
+    const mimeType = mime.getType(filePath)
+    // https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putObject-property
+    await s3.putObject({
+      Bucket: 'kotaku-blog',
+      Key: relativeToBaseFilePathForS3,
+      Body: fileContent,
+      ContentType: mimeType,
+    }).promise()
+    console.log(`Uploaded `, statistics, relativeToBaseFilePathForS3)
+  }
+}
+
+async function walkSync (dir) {
+  const files = fs.readdirSync(dir)
+  const output = []
+  for (const file of files) {
+    const pathToFile = path.join(dir, file)
+    const isDirectory = fs.statSync(pathToFile).isDirectory()
+    if (isDirectory) {
+      output.push(...await walkSync(pathToFile))
+    } else {
+      output.push(await pathToFile)
+    }
+  }
+  return output
 }

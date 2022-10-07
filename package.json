@@ -8,8 +8,8 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.185.0",
     "antd": "^4.23.3",
+    "aws-sdk": "^2.1230.0",
     "gatsby": "^4.23.1",
     "gatsby-plugin-feed": "^4.23.1",
     "gatsby-plugin-image": "^2.23.1",
@@ -30,7 +30,8 @@
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "s3": "github:andrewrk/node-s3-client#0ed018699843a2d3cc1cb37399ead1f76a72576d"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
