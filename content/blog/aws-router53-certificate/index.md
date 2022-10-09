@@ -33,7 +33,7 @@ The setting is to list all your **Alternative Domain Names** in the CloudFront d
 > #### Final step
 
 In your domain hosted zone in Route 53, select to **Create Record Set**.  
-You should create an **A record** for IPv4 and AWS resouces.
+You should create an **A record** for IPv4 and AWS resources.
 
 ![pic](ARecord.jpg)
 

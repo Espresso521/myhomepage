@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { BackTop } from 'antd'
+import { BackTop, Divider } from 'antd'
 import {
   SwapLeftOutlined,
   SwapRightOutlined,
@@ -32,7 +32,7 @@ const BlogPostTemplate = ({
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <hr />
+        <Divider />
         <footer>
           <Bio />
         </footer>

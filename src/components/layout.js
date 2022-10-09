@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { Divider } from 'antd'
 import {
   CopyrightOutlined,
 } from '@ant-design/icons'
@@ -29,7 +30,7 @@ const Layout = ({ location, title, children }) => {
         <Link className="blog-post-about-me-blog" to="/aboutme">
           AboutMe
         </Link>
-        <hr />
+        <Divider />
       </>
     )
   }
