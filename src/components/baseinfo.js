@@ -8,14 +8,14 @@ import {
   Html5TwoTone,
   CustomerServiceTwoTone,
   VideoCameraTwoTone,
-  MessageTwoTone,
   IeOutlined,
   SoundTwoTone,
+  CommentOutlined,
 } from '@ant-design/icons'
 
 const columns = [
   {
-    title: <MessageTwoTone />,
+    title: <><CommentOutlined style={{ 'color': '#FF1493' }} /></>,
     key: 'languages',
     dataIndex: 'languages',
 
@@ -40,7 +40,7 @@ const columns = [
       <>
         {tags.map((tag) => {
           let color = 'geekblue'
-          {/* if (tag.length === 2) {
+          /*{ if (tag.length === 2) {
             color = 'purple'
           } else if (tag.length === 3) {
             color = 'blue'
@@ -54,7 +54,7 @@ const columns = [
             color = 'pink'
           } else {
             color = 'red'
-          } */}
+          } }*/
 
           return (
             <Tag color={color} key={tag}>
@@ -92,7 +92,7 @@ const data = [
     address: 'Tokyo',
     education: 'Master',
     languages: ['Native Chinese', 'CET-6 English', 'N2 Japanese'],
-    tags: ['GO', 'Java', 'React', 'Kotlin', 'Android', 'AWS SAA', 'SpringBoot', 'IRIS Core Develop'],
+    tags: ['GO', 'C/C++', 'Java', 'React', 'Kotlin', 'Android', 'AWS SAA', 'SpringBoot', 'IRIS Core Develop'],
     technicals: ['SIP', 'RTP', 'H264', 'AAC', 'G711', 'RTSP', 'FFmpeg', 'MediaCodec'],
   },
 ]

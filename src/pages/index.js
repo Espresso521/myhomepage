@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { Divider } from 'antd'
+import { Divider, BackTop } from 'antd'
 import {
   BookTwoTone,
 } from '@ant-design/icons'
@@ -16,6 +16,7 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
+        <BackTop />
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
