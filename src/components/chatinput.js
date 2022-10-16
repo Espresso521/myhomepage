@@ -18,8 +18,8 @@ function ChatInput (props) {
       <div className="textarea-container">
         <textarea
           cols="80"
-          rows="5"
-          placeholder="发条友善的评论"
+          rows="2"
+          placeholder=""
           className="ipt-txt"
           onChange={(e) => {
             setDate({ content: e.target.value })

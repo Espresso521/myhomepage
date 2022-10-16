@@ -25,7 +25,7 @@ const Bio = () => {
         <span>
           <i>You can contact me:</i> <a href="mailto:kotaku20220424@gmail.com">kotaku20220424@gmail.com</a>
         </span>
-        <Link className="blog-post-about-me" to="/chat">
+        <Link className="blog-post-about-me" to="/chattome">
           ChatToMe
         </Link>
       </p>
