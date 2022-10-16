@@ -7,6 +7,7 @@
 
 import * as React from "react"
 import { Avatar } from 'antd'
+import { Link } from "gatsby"
 
 const Bio = () => {
 
@@ -24,6 +25,9 @@ const Bio = () => {
         <span>
           <i>You can contact me:</i> <a href="mailto:kotaku20220424@gmail.com">kotaku20220424@gmail.com</a>
         </span>
+        <Link className="blog-post-about-me" to="/chat">
+          ChatToMe
+        </Link>
       </p>
 
     </div>
