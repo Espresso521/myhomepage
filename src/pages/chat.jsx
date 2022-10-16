@@ -2,6 +2,7 @@ import '../index.css'
 import avatar from '../images/gatsby-icon.png'
 import { v4 as uuid } from 'uuid'
 import React, { useState } from 'react'
+import ChatInput from '../components/chatinput'
 
 // 依赖的数据
 const state = {
@@ -16,8 +17,6 @@ const state = {
       attitude: 1
     },
   ],
-  // the input content
-  comment: ''
 
 }
 
@@ -29,17 +28,9 @@ function Chat () {
 
   const [data, setDate] = useState(state)
 
-  const switchTab = (type) => {
-    console.log(type)
-    setDate({
-      ...data,
-      active: type
-    })
-  }
-
   const submitComment = (comment) => {
+    console.log("comment is " + comment)
     if (comment === null || comment === '') return
-    console.log(comment)
     setDate({
       ...data,
       list: [
@@ -47,7 +38,7 @@ function Chat () {
         {
           id: uuid(),
           author: 'Espresso',
-          comment: data.comment,
+          comment: comment,
           time: new Date(),
           // 1: 点赞 0：无态度 -1:踩
           attitude: 0
@@ -106,26 +97,7 @@ function Chat () {
         </div>
 
         {/* 添加评论 */}
-        <div className="comment-send">
-          <div className="user-face">
-            <img className="user-head" src={avatar} alt="" />
-          </div>
-          <div className="textarea-container">
-            <textarea
-              cols="80"
-              rows="5"
-              placeholder="发条友善的评论"
-              className="ipt-txt"
-              onChange={(e) => changeComment(e)}
-              value={data.comment}
-            />
-            <button onClick={() => submitComment(data.comment)} className="comment-submit">发表评论</button>
-          </div>
-          <div className="comment-emoji">
-            <i className="face"></i>
-            <span className="text">表情</span>
-          </div>
-        </div>
+        <ChatInput submitComment={submitComment} />
 
         {/* 评论列表 */}
         <div className="comment-list">
