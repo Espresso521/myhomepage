@@ -3,6 +3,7 @@ import avatar from '../images/gatsby-icon.png'
 import { v4 as uuid } from 'uuid'
 import React, { useState } from 'react'
 import ChatInput from '../components/chatinput'
+import { PageHeader, Descriptions, Avatar } from 'antd'
 
 // 依赖的数据
 const state = {
@@ -46,14 +47,17 @@ function Chat () {
   return (
     <div className="App">
       <div className="comment-container">
-        {/* message number */}
 
         {/* 评论列表 */}
         <div className="comment-list">
           {data.list.map(item => (
             <div className="list-item" key={item.id}>
               <div className="user-face">
-                <img className="user-head" src={avatar} alt="" />
+                <Avatar
+                  alt="Profile Avatar"
+                  src={avatar}
+                  size={30}
+                />
               </div>
               <div className="comment">
                 <div className="user">{item.author}</div>
@@ -66,8 +70,18 @@ function Chat () {
           ))}
         </div>
 
+        {/* Header */}
         <div className="comment-head">
-          <span>{data.list.length} Messages</span>
+          <PageHeader
+            ghost={false}
+            onBack={() => window.history.back()}
+            title="Welcome to Chat Room"
+          >
+            <Descriptions size="small" column={2}>
+              <Descriptions.Item label="User Number">3</Descriptions.Item>
+              <Descriptions.Item label="Message Number ">{data.list.length} </Descriptions.Item>
+            </Descriptions>
+          </PageHeader>
         </div>
 
         {/* 添加评论 */}
