@@ -25,14 +25,14 @@ async function test (folderPath) {
   const filesPaths = await walkSync(folderPath)
   let num = 0
   filesPaths.forEach(element => {
-    console.log(element)
+    //console.log(element)
     num = num + 1
   })
 
   console.log("total file number is " + num)
 }
 
-//test(filePath)
+test(filePath)
 
 function testDate () {
   var t = new Date()
@@ -44,6 +44,6 @@ function testDate () {
   console.log(t.getSeconds())
 }
 
-testDate()
+//testDate()
 
 
