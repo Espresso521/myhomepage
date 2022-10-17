@@ -20,13 +20,13 @@ const Bio = () => {
         size={75}
       />
       <p>
-        Written by <strong>Hu Ze</strong> who <i>lives</i> and <i>works</i> in <big>Tokyo</big>
+        I'm <strong>Hu Ze</strong> who <i>lives</i> and <i>works</i> in <big>Tokyo</big>
         <br></br>
         <span>
           <i>You can contact me:</i> <a href="mailto:kotaku20220424@gmail.com">kotaku20220424@gmail.com</a>
         </span><br></br>
         <span>
-          <i>You can chat to me in</i> <a href="/chattome">ChatRoom</a>
+          <i>You can chat to me in</i> <a href="/chattome">My ChatRoom</a>
         </span>
       </p>
 
