@@ -47,9 +47,6 @@ function Chat () {
     <div className="App">
       <div className="comment-container">
         {/* message number */}
-        <div className="comment-head">
-          <span>{data.list.length} Messages</span>
-        </div>
 
         {/* 评论列表 */}
         <div className="comment-list">
@@ -67,6 +64,10 @@ function Chat () {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="comment-head">
+          <span>{data.list.length} Messages</span>
         </div>
 
         {/* 添加评论 */}

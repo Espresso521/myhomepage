@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import '../index.css'
-import avatar from '../images/gatsby-icon.png'
+import { Divider } from 'antd'
+
 
 const state = {
   content: '',
@@ -12,8 +13,10 @@ function ChatInput (props) {
 
   return (
     <div className="comment-send">
-      <div className="user-face">
-        <img className="user-head" src={avatar} alt="" />
+      <Divider />
+      <div className="comment-emoji">
+        <i className="face"></i>
+        <span className="text">表情</span>
       </div>
       <div className="textarea-container">
         <textarea
@@ -29,12 +32,9 @@ function ChatInput (props) {
         <button onClick={() => {
           props.submitComment(data.content)
           setDate({ content: '' })
-        }} className="comment-submit">发表评论</button>
+        }} className="comment-submit">Send</button>
       </div>
-      <div className="comment-emoji">
-        <i className="face"></i>
-        <span className="text">表情</span>
-      </div>
+
     </div>
   )
 }
