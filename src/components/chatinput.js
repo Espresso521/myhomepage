@@ -19,7 +19,7 @@ function ChatInput (props) {
       <Input.Group compact className='comment-send'>
         <Input
           style={{
-            width: 'calc(100% - 135px)',
+            width: 'calc(100% - 121px)',
           }}
           onChange={(e) => {
             setDate({ content: e.target.value })

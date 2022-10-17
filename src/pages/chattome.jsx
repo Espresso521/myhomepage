@@ -1,5 +1,4 @@
 import '../index.css'
-import avatar from '../images/gatsby-icon.png'
 import { v4 as uuid } from 'uuid'
 import React, { useState, useEffect } from 'react'
 import ChatInput from '../components/chatinput'
@@ -15,6 +14,7 @@ const state = {
       author: 'Kotaku',
       comment: 'How R U! Nice to meet U!',
       time: new Date(),
+      isMe: false,
     },
   ],
 
@@ -53,6 +53,7 @@ function Chat () {
           author: 'Espresso',
           comment: comment,
           time: new Date(),
+          isMe: true,
         }
       ]
     })
@@ -65,28 +66,50 @@ function Chat () {
         <PageHeader
           className="site-page-header"
           onBack={() => window.location.href = "/"}
-          title="Do IT"
+          title="Just Do IT"
           subTitle="Server By GO"
         />
 
         {/* 评论列表 */}
         <ScrollToBottom className="comment-list">
-          {data.list.map(item => (
-            <div className="list-item" key={item.id}>
-              <Avatar
-                alt="Profile Avatar"
-                src={avatar}
-                size={25}
-              />
-              <div className="comment">
-                <div className="user">{item.author}</div>
-                <i className="text">{item.comment}</i>
-                <div className="info">
-                  <span className="time">{formatTime(item.time)}</span>
+          {data.list.map(item => {
+            console.log('item.isMe is ' + item.isMe)
+            if (item.isMe) {
+              return (
+                <div className="list-item" key={item.id}>
+                  <div className="commentme">
+                    <div className="userme">{item.author}</div>
+                    <i className="textme">{item.comment}</i>
+                    <div className="info">
+                      <span className="timeme">{formatTime(item.time)}</span>
+                    </div>
+                  </div>
+                  <Avatar
+                    alt="Profile Avatar"
+                    src="/1.svg"
+                    size={25}
+                  />
                 </div>
-              </div>
-            </div>
-          ))}
+              )
+            } else {
+              return (
+                <div className="list-item" key={item.id}>
+                  <Avatar
+                    alt="Profile Avatar"
+                    src="/1.svg"
+                    size={25}
+                  />
+                  <div className="comment">
+                    <div className="user">{item.author}</div>
+                    <i className="text">{item.comment}</i>
+                    <div className="info">
+                      <span className="time">{formatTime(item.time)}</span>
+                    </div>
+                  </div>
+                </div>
+              )
+            }
+          })}
         </ScrollToBottom>
 
         {/* 添加评论 */}
