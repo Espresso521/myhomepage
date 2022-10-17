@@ -32,7 +32,18 @@ async function test (folderPath) {
   console.log("total file number is " + num)
 }
 
-test(filePath)
+//test(filePath)
 
+function testDate () {
+  var t = new Date()
+  console.log(t.getFullYear())
+  console.log(t.getMonth() + 1)
+  console.log(t.getDate())
+  console.log(t.getHours())
+  console.log(t.getMinutes())
+  console.log(t.getSeconds())
+}
+
+testDate()
 
 

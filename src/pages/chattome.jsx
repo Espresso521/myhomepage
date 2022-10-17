@@ -2,7 +2,7 @@ import '../index.css'
 import { v4 as uuid } from 'uuid'
 import React, { useState, useEffect } from 'react'
 import ChatInput from '../components/chatinput'
-import { PageHeader, Descriptions, Avatar } from 'antd'
+import { PageHeader, Avatar } from 'antd'
 import ScrollToBottom from 'react-scroll-to-bottom'
 
 // 依赖的数据
@@ -15,13 +15,21 @@ const state = {
       comment: 'How R U! Nice to meet U!',
       time: new Date(),
       isMe: false,
+      userid: 1
     },
   ],
-
 }
 
 function formatTime (time) {
   return `${time.getFullYear()}-${time.getMonth() + 1}-${time.getDate()} ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
+}
+
+function getAvatar (item) {
+  if (item.author === 'Kotaku') {
+    return '/5avatar.svg'
+  } else {
+    return '/1avatar.svg'
+  }
 }
 
 function Chat () {
@@ -42,7 +50,6 @@ function Chat () {
   }, [])
 
   const submitComment = (comment) => {
-    console.log("comment is " + comment)
     if (comment === null || comment === '') return
     setDate({
       ...data,
@@ -73,7 +80,6 @@ function Chat () {
         {/* 评论列表 */}
         <ScrollToBottom className="comment-list">
           {data.list.map(item => {
-            console.log('item.isMe is ' + item.isMe)
             if (item.isMe) {
               return (
                 <div className="list-item" key={item.id}>
@@ -86,7 +92,7 @@ function Chat () {
                   </div>
                   <Avatar
                     alt="Profile Avatar"
-                    src="/1.svg"
+                    src={getAvatar(item)}
                     size={25}
                   />
                 </div>
@@ -96,7 +102,7 @@ function Chat () {
                 <div className="list-item" key={item.id}>
                   <Avatar
                     alt="Profile Avatar"
-                    src="/1.svg"
+                    src={getAvatar(item)}
                     size={25}
                   />
                   <div className="comment">
