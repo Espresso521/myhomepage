@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import '../index.css'
-import { Divider } from 'antd'
 
 
 const state = {
@@ -13,7 +12,6 @@ function ChatInput (props) {
 
   return (
     <div className="comment-send">
-      <Divider />
       <div className="comment-emoji">
         <i className="face"></i>
         <span className="text">表情</span>

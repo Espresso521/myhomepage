@@ -28,8 +28,12 @@ const Bio = () => {
         <Link className="blog-post-about-me" to="/chattome">
           ChatToMe
         </Link>
-      </p>
 
+
+      </p>
+      <Link to="/test">
+        Test
+      </Link>
     </div>
   )
 }
