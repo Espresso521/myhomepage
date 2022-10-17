@@ -79,7 +79,7 @@ function Chat () {
                 <div className="list-item" key={item.id}>
                   <div className="commentme">
                     <div className="userme">{item.author}</div>
-                    <i className="textme">{item.comment}</i>
+                    <p className="textme">{item.comment}</p>
                     <div className="info">
                       <span className="timeme">{formatTime(item.time)}</span>
                     </div>
@@ -101,7 +101,7 @@ function Chat () {
                   />
                   <div className="comment">
                     <div className="user">{item.author}</div>
-                    <i className="text">{item.comment}</i>
+                    <p className="text">{item.comment}</p>
                     <div className="info">
                       <span className="time">{formatTime(item.time)}</span>
                     </div>
