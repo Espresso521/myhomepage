@@ -4,7 +4,7 @@
   list-style: none;
 }
 .App {
-  width: 95%;
+  width: 85%;
   margin: 10px;
   display: block;
 }
@@ -17,8 +17,10 @@
 }
 
 .comment-send {
-  margin-right: 10px;
+  bottom: 0;
+  position: fixed;
   background: white;
+  margin-bottom: 10px;
 }
 
 .user-face {
@@ -188,11 +190,7 @@
   flex: 1;
   position: relative;
   margin-left: 10px;
-  border-top: 1px solid #e5e9ef;
-}
-
-.list-item:last-child .comment {
-  border-bottom: 1px solid #e5e9ef;
+  border-bottom: 1px solid #f5f5f5;
 }
 
 .comment .user {
