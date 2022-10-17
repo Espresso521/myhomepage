@@ -4,24 +4,19 @@
   list-style: none;
 }
 .App {
-  width: 80%;
+  width: 95%;
   margin: 10px;
   display: block;
 }
 .comment-head {
   width: 100%;
-  top: 0;
-  position: fixed;
 }
 
 .comment-list {
-  margin-top: 140px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 .comment-send {
-  bottom: 0;
-  position: fixed;
   margin-right: 10px;
   background: white;
 }
@@ -195,6 +190,7 @@
   margin-left: 10px;
   border-top: 1px solid #e5e9ef;
 }
+
 .list-item:last-child .comment {
   border-bottom: 1px solid #e5e9ef;
 }
@@ -288,4 +284,24 @@
 .btn-hover:hover {
   color: #00a1d6;
   background: #e5e9ef;
+}
+
+.wrap {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.left {
+  width: 30%;
+  height: 50%;
+  background-color: pink;
+  overflow: auto;
+}
+
+.right {
+  width: 70%;
+  height: 80%;
+  background-color: plum;
+  overflow: auto;
 }

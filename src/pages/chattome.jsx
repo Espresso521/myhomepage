@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import ChatInput from '../components/chatinput'
 import { Link } from "gatsby"
 import { PageHeader, Descriptions, Avatar } from 'antd'
+import InfiniteScroll from "react-infinite-scroll-component"
 
 // 依赖的数据
 const state = {
@@ -47,9 +48,26 @@ function Chat () {
 
   return (
     <div className="App">
+      {/* Header */}
+      <div className="comment-head">
+        <PageHeader
+          ghost={false}
+          onBack={() => window.location.href = "/"}
+          title="Welcome to Chat Room"
+        >
+          <Descriptions size="small" column={2}>
+            <Descriptions.Item label="User Number">3</Descriptions.Item>
+            <Descriptions.Item label="Message Number ">{data.list.length} </Descriptions.Item>
+          </Descriptions>
+        </PageHeader>
+      </div>
 
       {/* 评论列表 */}
-      <div className="comment-list">
+      <InfiniteScroll
+        dataLength={state.list.length}
+        loader={<h4>Loading...</h4>}
+        height={550}
+      >
         {data.list.map(item => (
           <div className="list-item" key={item.id}>
             <Avatar
@@ -66,21 +84,7 @@ function Chat () {
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Header */}
-      <div className="comment-head">
-        <PageHeader
-          ghost={false}
-          onBack={() => window.location.href = "/"}
-          title="Welcome to Chat Room"
-        >
-          <Descriptions size="small" column={2}>
-            <Descriptions.Item label="User Number">3</Descriptions.Item>
-            <Descriptions.Item label="Message Number ">{data.list.length} </Descriptions.Item>
-          </Descriptions>
-        </PageHeader>
-      </div>
+      </InfiniteScroll>
 
       {/* 添加评论 */}
       <ChatInput submitComment={submitComment} />
