@@ -52,16 +52,14 @@ function Chat () {
         <div className="comment-list">
           {data.list.map(item => (
             <div className="list-item" key={item.id}>
-              <div className="user-face">
-                <Avatar
-                  alt="Profile Avatar"
-                  src={avatar}
-                  size={30}
-                />
-              </div>
+              <Avatar
+                alt="Profile Avatar"
+                src={avatar}
+                size={30}
+              />
               <div className="comment">
                 <div className="user">{item.author}</div>
-                <p className="text">{item.comment}</p>
+                <i className="text">{item.comment}</i>
                 <div className="info">
                   <span className="time">{formatTime(item.time)}</span>
                 </div>
