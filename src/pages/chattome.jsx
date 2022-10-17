@@ -3,9 +3,8 @@ import avatar from '../images/gatsby-icon.png'
 import { v4 as uuid } from 'uuid'
 import React, { useState } from 'react'
 import ChatInput from '../components/chatinput'
-import { Link } from "gatsby"
 import { PageHeader, Descriptions, Avatar } from 'antd'
-import InfiniteScroll from "react-infinite-scroll-component"
+import ScrollToBottom from 'react-scroll-to-bottom'
 
 // 依赖的数据
 const state = {
@@ -63,11 +62,7 @@ function Chat () {
       </div>
 
       {/* 评论列表 */}
-      <InfiniteScroll
-        dataLength={state.list.length}
-        loader={<h4>Loading...</h4>}
-        height={550}
-      >
+      <ScrollToBottom className="comment-list ">
         {data.list.map(item => (
           <div className="list-item" key={item.id}>
             <Avatar
@@ -84,7 +79,7 @@ function Chat () {
             </div>
           </div>
         ))}
-      </InfiniteScroll>
+      </ScrollToBottom>
 
       {/* 添加评论 */}
       <ChatInput submitComment={submitComment} />
