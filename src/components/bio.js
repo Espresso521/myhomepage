@@ -7,7 +7,6 @@
 
 import * as React from "react"
 import { Avatar } from 'antd'
-import { Link } from "gatsby"
 
 const Bio = () => {
 
