@@ -13,7 +13,7 @@ const state = {
     {
       id: uuid(),
       author: 'Kotaku',
-      comment: 'Hi everyone. Nice to meet you!',
+      comment: 'How R U! Nice to meet U!',
       time: new Date(),
     },
   ],
@@ -50,39 +50,35 @@ function Chat () {
       {/* Header */}
       <div className="comment-head">
         <PageHeader
-          ghost={false}
+          className="site-page-header"
           onBack={() => window.location.href = "/"}
-          title="Welcome to Chat Room"
-        >
-          <Descriptions size="small" column={2}>
-            <Descriptions.Item label="User Number">3</Descriptions.Item>
-            <Descriptions.Item label="Message Number ">{data.list.length} </Descriptions.Item>
-          </Descriptions>
-        </PageHeader>
-      </div>
+          title="Just do IT"
+          subTitle="Welcome to this chat room"
+        />
 
-      {/* 评论列表 */}
-      <ScrollToBottom className="comment-list ">
-        {data.list.map(item => (
-          <div className="list-item" key={item.id}>
-            <Avatar
-              alt="Profile Avatar"
-              src={avatar}
-              size={30}
-            />
-            <div className="comment">
-              <div className="user">{item.author}</div>
-              <i className="text">{item.comment}</i>
-              <div className="info">
-                <span className="time">{formatTime(item.time)}</span>
+        {/* 评论列表 */}
+        <ScrollToBottom className="comment-list">
+          {data.list.map(item => (
+            <div className="list-item" key={item.id}>
+              <Avatar
+                alt="Profile Avatar"
+                src={avatar}
+                size={25}
+              />
+              <div className="comment">
+                <div className="user">{item.author}</div>
+                <i className="text">{item.comment}</i>
+                <div className="info">
+                  <span className="time">{formatTime(item.time)}</span>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </ScrollToBottom>
+          ))}
+        </ScrollToBottom>
 
-      {/* 添加评论 */}
-      <ChatInput submitComment={submitComment} />
+        {/* 添加评论 */}
+        <ChatInput submitComment={submitComment} />
+      </div>
     </div>
   )
 }

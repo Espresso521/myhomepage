@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import '../index.css'
+import {
+  Button,
+  Input,
+} from 'antd'
 
 
 const state = {
@@ -12,27 +16,21 @@ function ChatInput (props) {
 
   return (
     <div className="comment-send">
-      <div className="comment-emoji">
-        <i className="face"></i>
-        <span className="text">表情</span>
-      </div>
-      <div className="textarea-container">
-        <textarea
-          cols="80"
-          rows="2"
-          placeholder=""
-          className="ipt-txt"
+      <Input.Group compact className='comment-send'>
+        <Input
+          style={{
+            width: 'calc(100% - 135px)',
+          }}
           onChange={(e) => {
             setDate({ content: e.target.value })
           }}
           value={data.content}
         />
-        <button onClick={() => {
+        <Button type="primary" onClick={() => {
           props.submitComment(data.content)
           setDate({ content: '' })
-        }} className="comment-submit">Send</button>
-      </div>
-
+        }}>Send</Button>
+      </Input.Group>
     </div>
   )
 }
