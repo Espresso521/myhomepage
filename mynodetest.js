@@ -46,4 +46,39 @@ function testDate () {
 
 //testDate()
 
+function testSocket (params) {
+  console.log('start test socket')
+  // 连接服务器, 得到与服务器的连接对象
+  const socket = require("socket.io-client")('ws://0.0.0.0:5210')
+  // 绑定监听, 接收服务器发送的消息
+  socket.on('receiveMsg', function (data) {
+    console.log('客户端接收服务器发送的消息', data)
+  })
+
+  // 发送消息
+  socket.emit('sendMsg', { name: 'abc' })
+  console.log('客户端向服务器发消息', { name: 'abc' })
+
+}
+
+var net = require('net')
+
+function testTcp (params) {
+  var client = new net.Socket()
+  client.connect(5210, '0.0.0.0', function () {
+    console.log('Connected')
+    client.write('Hello, server! Love, Client.')
+  })
+
+  client.on('data', function (data) {
+    console.log('Received: ' + data)
+    client.destroy() // kill client after server's response
+  })
+
+  client.on('close', function () {
+    console.log('Connection closed')
+  })
+}
+
+testTcp()
 
