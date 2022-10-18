@@ -32,6 +32,27 @@ function getAvatar (item) {
   }
 }
 
+function socketio (params) {
+
+  var ws = new WebSocket("ws://localhost:8080/echo")
+  ws.onopen = function (evt) {
+    console.log("OPEN")
+    ws.send('fuck you!!!!!!!!!!!!!!!!!')
+    ws.send('baga   \njfkdsjfksjflsf')
+  }
+  ws.onclose = function (evt) {
+    console.log("CLOSE")
+    ws = null
+  }
+  ws.onmessage = function (evt) {
+    console.log("RESPONSE: " + evt.data)
+  }
+  ws.onerror = function (evt) {
+    console.log("ERROR: " + evt.data)
+  }
+
+}
+
 function Chat () {
 
   const [data, setDate] = useState(state)
@@ -47,6 +68,8 @@ function Chat () {
       }
       return i
     })
+
+    socketio()
   }, [])
 
   const submitComment = (comment) => {
