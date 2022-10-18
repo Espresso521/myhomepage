@@ -13,13 +13,13 @@ const Bio = () => {
   return (
     <div className="bio">
       <Avatar
-        style={{ 'marginRight': '10px' }}
+        style={{ 'marginRight': '10px', 'marginTop': '5px' }}
         alt="Profile Avatar"
         src="/myself.jpg"
         size={75}
       />
       <p>
-        I'm <strong>Hu Ze</strong> who <i>lives</i> and <i>works</i> in <big>Tokyo</big>
+        I'm <strong>Hu Ze</strong> from <big>Tokyo</big>
         <br></br>
         <span>
           <i>You can contact me:</i> <a href="mailto:kotaku20220424@gmail.com">My Gmail</a>
