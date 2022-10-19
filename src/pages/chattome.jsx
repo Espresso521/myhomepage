@@ -2,29 +2,31 @@ import '../index.css'
 import { v4 as uuid } from 'uuid'
 import React, { useState, useEffect } from 'react'
 import ChatInput from '../components/chatinput'
-import { PageHeader, Avatar, message, Button, Tag } from 'antd'
+import { PageHeader, Avatar, message, Tag } from 'antd'
 import ScrollToBottom from 'react-scroll-to-bottom'
 import {
   DisconnectOutlined,
   LinkOutlined,
 } from '@ant-design/icons'
 
+import store from '../store'
+
 
 // 依赖的数据
-const state = {
-  // chat history
-  list: [
-    {
-      id: uuid(),
-      author: 'Kotaku',
-      comment: 'How R U! Nice to meet U!',
-      time: new Date(),
-      isMe: false,
-      userid: 1,
-      icon: '/5avatar.svg'
-    },
-  ],
-}
+// const state = {
+//   // chat history
+//   list: [
+//     {
+//       id: uuid(),
+//       author: 'Kotaku',
+//       comment: 'How R U! Nice to meet U!',
+//       time: new Date(),
+//       isMe: false,
+//       userid: 1,
+//       icon: '/5avatar.svg'
+//     },
+//   ],
+// }
 
 const connectStatus = {
   status: 0
@@ -75,7 +77,8 @@ var myName, myIcon
 
 function Chat () {
 
-  const [data, setDate] = useState(state)
+  // Store 提供了 subscribe 用于监听数据变化
+  // store.subscribe(() => { })
   const [status, setStatus] = useState(connectStatus)
 
   useEffect(() => {
@@ -104,25 +107,16 @@ function Chat () {
   }, [])
 
   function addMsg (msg) {
-    console.log(data)
-    setDate({
-      list: [
-        ...data.list,
-        {
-          id: uuid(),
-          author: msg.sender,
-          comment: msg.content,
-          time: new Date(),
-          isMe: false,
-          icon: msg.icon,
-        }
-      ]
-    })
+    const action = {
+      type: 'addMsg',
+      value: msg,
+    }
+
+    store.dispatch(action)
   }
 
   const submitComment = (comment) => {
     if (comment === null || comment === '') return
-    console.log(data)
     const msg = {
       protocal: 'msg',
       sender: myName,
@@ -135,19 +129,12 @@ function Chat () {
     console.log('res is : ' + res)
     ws.send(res)
 
-    setDate({
-      list: [
-        ...data.list,
-        {
-          id: uuid(),
-          author: myName,
-          comment: comment,
-          time: new Date(),
-          isMe: true,
-          icon: myIcon,
-        }
-      ]
-    })
+    const action = {
+      type: 'addMsg',
+      value: msg,
+    }
+
+    store.dispatch(action)
   }
 
   const getTag = (status) => {
@@ -172,7 +159,7 @@ function Chat () {
 
         {/* 评论列表 */}
         <ScrollToBottom className="comment-list">
-          {data.list.map(item => {
+          {store.getState().list.map(item => {
             if (item.isMe) {
               return (
                 <div className="list-item" key={item.id}>
