@@ -119,33 +119,33 @@ exports.createSchemaCustomization = ({ actions }) => {
   `)
 }
 
-// exports.onPostBuild = async function ({ reporter }) {
-//   AWS.config.setPromisesDependency(Promise)
-//   const folderPath = path.join(__dirname, "./public")
-//   const filesPaths = await walkSync(folderPath)
-//   if (filesPaths.length === 0) return
-//   // create S3 Object
-//   const s3 = new AWS.S3({
-//     signatureVersion: 'v4',
-//   })
-//   for (let i = 0; i < filesPaths.length; i++) {
-//     const statistics = `(${i + 1}/${filesPaths.length}, ${Math.round((i + 1) / filesPaths.length * 100)}%)`
-//     const filePath = filesPaths[i]
-//     const fileContent = fs.readFileSync(filePath)
-//     // If the slash is like this "/" s3 will create a new folder, otherwise will not work properly.
-//     const relativeToBaseFilePath = path.normalize(path.relative(folderPath, filePath))
-//     const relativeToBaseFilePathForS3 = relativeToBaseFilePath.split(path.sep).join('/')
-//     const mimeType = mime.getType(filePath)
-//     // https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putObject-property
-//     await s3.putObject({
-//       Bucket: 'kotaku-blog',
-//       Key: relativeToBaseFilePathForS3,
-//       Body: fileContent,
-//       ContentType: mimeType,
-//     }).promise()
-//     console.log(`Uploaded `, statistics, relativeToBaseFilePathForS3)
-//   }
-// }
+exports.onPostBuild = async function ({ reporter }) {
+  AWS.config.setPromisesDependency(Promise)
+  const folderPath = path.join(__dirname, "./public")
+  const filesPaths = await walkSync(folderPath)
+  if (filesPaths.length === 0) return
+  // create S3 Object
+  const s3 = new AWS.S3({
+    signatureVersion: 'v4',
+  })
+  for (let i = 0; i < filesPaths.length; i++) {
+    const statistics = `(${i + 1}/${filesPaths.length}, ${Math.round((i + 1) / filesPaths.length * 100)}%)`
+    const filePath = filesPaths[i]
+    const fileContent = fs.readFileSync(filePath)
+    // If the slash is like this "/" s3 will create a new folder, otherwise will not work properly.
+    const relativeToBaseFilePath = path.normalize(path.relative(folderPath, filePath))
+    const relativeToBaseFilePathForS3 = relativeToBaseFilePath.split(path.sep).join('/')
+    const mimeType = mime.getType(filePath)
+    // https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putObject-property
+    await s3.putObject({
+      Bucket: 'kotaku-blog',
+      Key: relativeToBaseFilePathForS3,
+      Body: fileContent,
+      ContentType: mimeType,
+    }).promise()
+    console.log(`Uploaded `, statistics, relativeToBaseFilePathForS3)
+  }
+}
 
 async function walkSync (dir) {
   const files = fs.readdirSync(dir)

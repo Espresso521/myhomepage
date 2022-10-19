@@ -61,24 +61,24 @@ function testSocket (params) {
 
 }
 
-var net = require('net')
+// var net = require('net')
 
-function testTcp (params) {
-  var client = new net.Socket()
-  client.connect(5210, '0.0.0.0', function () {
-    console.log('Connected')
-    client.write('Hello, server! Love, Client.')
-  })
+// function testTcp (params) {
+//   var client = new net.Socket()
+//   client.connect(5210, '0.0.0.0', function () {
+//     console.log('Connected')
+//     client.write('Hello, server! Love, Client.')
+//   })
 
-  client.on('data', function (data) {
-    console.log('Received: ' + data)
-    client.destroy() // kill client after server's response
-  })
+//   client.on('data', function (data) {
+//     console.log('Received: ' + data)
+//     client.destroy() // kill client after server's response
+//   })
 
-  client.on('close', function () {
-    console.log('Connection closed')
-  })
-}
+//   client.on('close', function () {
+//     console.log('Connection closed')
+//   })
+// }
 
-testTcp()
+// testTcp()
 
