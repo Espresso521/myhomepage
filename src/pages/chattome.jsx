@@ -21,8 +21,8 @@ function formatTime (time) {
 
 message.config({
   top: 250,
-  duration: 3,
-  maxCount: 3,
+  duration: 2,
+  maxCount: 2,
   rtl: true,
 })
 
@@ -36,6 +36,8 @@ const socketio = (setStatus, addMsg) => {
   }
   ws.onclose = function (evt) {
     ws = null
+    console.log("ERROR: " + evt.data)
+    message.error('Disconnect from IM Server')
     setStatus({ status: 0 })
   }
   ws.onmessage = function (evt) {
@@ -50,7 +52,7 @@ const socketio = (setStatus, addMsg) => {
 
   ws.onerror = function (evt) {
     console.log("ERROR: " + evt.data)
-    message.warning('Error: Can not connect to Server')
+    //message.warning('Error: Can not connect to Server')
     setStatus({ status: 0 })
   }
 

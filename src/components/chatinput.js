@@ -25,6 +25,12 @@ function ChatInput (props) {
             setDate({ content: e.target.value })
           }}
           value={data.content}
+
+          onPressEnter={(e) => {
+            e.preventDefault()
+            props.submitComment(data.content)
+            setDate({ content: '' })
+          }}
         />
         <Button type="primary" onClick={() => {
           props.submitComment(data.content)
