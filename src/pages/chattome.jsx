@@ -1,5 +1,4 @@
 import '../index.css'
-import { v4 as uuid } from 'uuid'
 import React, { useState, useEffect } from 'react'
 import ChatInput from '../components/chatinput'
 import { PageHeader, Avatar, message, Tag } from 'antd'
@@ -83,7 +82,6 @@ function Chat () {
       // 当store数据更新后执行 setUpdate() ，组件重新加载，实现界面store数据更新
       setUpdate({})
     })
-
 
     return () => {
       try {
