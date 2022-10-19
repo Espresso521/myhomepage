@@ -6,7 +6,7 @@ const defaultState = {  // chat history
       id: uuid(),
       author: 'Kotaku',
       comment: 'Nice to meet U!',
-      time: new Date(),
+      time: Date().substring(0, 24),
       isMe: false,
       userid: 1,
       icon: '/5avatar.svg'
@@ -16,34 +16,28 @@ const defaultState = {  // chat history
 
 const reducer = (state = defaultState, action) => {
 
-  console.log(action)
-
   //reducer can only receive state, we can not change the state
   if (action.type === 'addMsg') {
-    let newState = JSON.parse(JSON.stringify(state))
-    const msg = action.value
-    let newData = {
+    var newState = JSON.parse(JSON.stringify(state))
+    newState.list.push({
       id: uuid(),
-      author: msg.sender,
-      comment: msg.content,
-      time: new Date(),
+      author: action.value.sender,
+      comment: action.value.content,
+      time: Date().substring(0, 24),
       isMe: false,
-      icon: msg.icon,
-    }
-    newState.list.push(newData)
+      icon: action.value.icon,
+    })
     return newState
   } else if (action.type === 'addMyMsg') {
-    let newState = JSON.parse(JSON.stringify(state))
-    const msg = action.value
-    let newData = {
+    var newState = JSON.parse(JSON.stringify(state))
+    newState.list.push({
       id: uuid(),
-      author: msg.sender,
-      comment: msg.content,
-      time: new Date(),
+      author: action.value.sender,
+      comment: action.value.content,
+      time: Date().substring(0, 24),
       isMe: true,
-      icon: msg.icon,
-    }
-    newState.list.push(newData)
+      icon: action.value.icon,
+    })
     return newState
   }
 
