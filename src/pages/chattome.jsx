@@ -34,15 +34,6 @@ function formatTime (time) {
   return `${time.getFullYear()}-${time.getMonth() + 1}-${time.getDate()} ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
 }
 
-var messageJson = {
-  protocal: 'msg',
-  sender: '',
-  receiver: '',
-  content: '',
-  icon: '',
-  append: '',
-}
-
 message.config({
   top: 250,
   duration: 3,
