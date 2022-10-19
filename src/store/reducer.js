@@ -31,7 +31,19 @@ const reducer = (state = defaultState, action) => {
       icon: msg.icon,
     }
     newState.list.push(newData)
-    //console.log(newState)
+    return newState
+  } else if (action.type === 'addMyMsg') {
+    let newState = JSON.parse(JSON.stringify(state))
+    const msg = action.value
+    let newData = {
+      id: uuid(),
+      author: msg.sender,
+      comment: msg.content,
+      time: new Date(),
+      isMe: true,
+      icon: msg.icon,
+    }
+    newState.list.push(newData)
     return newState
   }
 

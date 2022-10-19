@@ -11,29 +11,13 @@ import {
 
 import store from '../store'
 
-
-// 依赖的数据
-// const state = {
-//   // chat history
-//   list: [
-//     {
-//       id: uuid(),
-//       author: 'Kotaku',
-//       comment: 'How R U! Nice to meet U!',
-//       time: new Date(),
-//       isMe: false,
-//       userid: 1,
-//       icon: '/5avatar.svg'
-//     },
-//   ],
-// }
-
 const connectStatus = {
   status: 0
 }
 
 function formatTime (time) {
-  return `${time.getFullYear()}-${time.getMonth() + 1}-${time.getDate()} ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
+  return 'aaa'
+  //return `${time.getFullYear()}-${time.getMonth() + 1}-${time.getDate()} ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
 }
 
 message.config({
@@ -77,17 +61,12 @@ var myName, myIcon
 
 function Chat () {
 
-  // Store 提供了 subscribe 用于监听数据变化
-  // store.subscribe(() => { })
+  const [update, setUpdate] = useState({})
   const [status, setStatus] = useState(connectStatus)
 
   useEffect(() => {
-    // 添加禁止缩放的meta标签
-    // <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
     Array.from(document.getElementsByTagName('meta')).filter(i => {
       if (i.name === 'viewport') {
-        //不允许缩放
-        // <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
         i.content = "width=device-width, initial-scale=1, shrink-to-fit=no,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
       }
       return i
@@ -97,6 +76,13 @@ function Chat () {
     myIcon = '/' + Math.ceil(Math.random() * 10) + 'avatar.svg'
 
     socketio(setStatus, addMsg)
+
+    // store.subscribe()是redux提供的，监测store更新的函数
+    store.subscribe(() => {
+      // 当store数据更新后执行 setUpdate() ，组件重新加载，实现界面store数据更新
+      setUpdate({})
+    })
+
 
     return () => {
       try {
@@ -130,7 +116,7 @@ function Chat () {
     ws.send(res)
 
     const action = {
-      type: 'addMsg',
+      type: 'addMyMsg',
       value: msg,
     }
 
