@@ -25,7 +25,7 @@ const Bio = () => {
           <i>You can contact me:</i> <a href="mailto:kotaku20220424@gmail.com">My Gmail</a>
         </span><br></br>
         <span>
-          <i>You can chat to me in</i> <a href="/chattome">My ChatRoom</a>
+          <i>You can chat to me:</i> <a href="/chattome">ChatRoom</a>
         </span>
       </p>
 

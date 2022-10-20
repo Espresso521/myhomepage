@@ -28,7 +28,8 @@ message.config({
 var ws
 const socketio = (setStatus, addMsg) => {
 
-  ws = new WebSocket("ws://0.0.0.0:5211/ws")
+  ws = new WebSocket("wss://kotaku-blog.link/ws")
+  //ws = new WebSocket("ws://127.0.0.1:80/ws")
   ws.onopen = function (evt) {
     message.success('Connect IM Server Success')
     setStatus({ status: 1 })
