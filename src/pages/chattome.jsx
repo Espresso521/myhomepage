@@ -138,8 +138,8 @@ function Chat () {
         <PageHeader
           className="site-page-header"
           onBack={() => window.location.href = "/"}
-          title="Just Do IT"
-          subTitle="Server By GO"
+          title={<span className='comP'>Just Do IT</span>}
+          subTitle={<span className='comLabel'>Server By GO</span>}
           tags={getTag(status)}
         />
 

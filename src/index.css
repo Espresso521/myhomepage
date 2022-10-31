@@ -195,8 +195,7 @@
 
 .comment .user {
   color: #1e90ff;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 10px;
   line-height: 18px;
   padding-bottom: 4px;
   display: block;
@@ -207,6 +206,8 @@
 .comment .text {
   padding: 2px 0;
   font-size: 14px;
+  font-weight: bold;
+  color: #008080;
   text-shadow: none;
   overflow: hidden;
   word-wrap: break-word;
@@ -227,8 +228,7 @@
 
 .commentme .userme {
   color: #1e90ff;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 10px;
   line-height: 18px;
   padding-bottom: 4px;
   display: block;
@@ -240,6 +240,8 @@
 .commentme .textme {
   padding: 2px 0;
   font-size: 14px;
+  color: #008080;
+  font-weight: bold;
   text-shadow: none;
   overflow: hidden;
   word-wrap: break-word;
@@ -252,8 +254,8 @@
 
 .info {
   color: #99a2aa;
-  line-height: 26px;
-  font-size: 12px;
+  line-height: 21px;
+  font-size: 9px;
 }
 
 .icon {
