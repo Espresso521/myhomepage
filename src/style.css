@@ -358,7 +358,7 @@ a:focus {
   text-decoration: none;
   margin-top: 10px;
   margin-right: 5px;
-  font: 150 25px "Comic Sans MS";
+  font: 150 21px "Comic Sans MS";
   text-shadow: 0px 0px 20px yellow, 0px 0px 10px orange, 0px 0px 10px orangered,
     0px 0px 10px red;
 }
@@ -390,7 +390,7 @@ a:focus {
   font-size: var(--fontSize-4);
   font-family: "Georgia";
   font-weight: var(--fontWeight-bold);
-  color: #000080;
+  color: #008080;
 }
 
 .about_career_timeline_font {
@@ -412,4 +412,12 @@ a:focus {
   font: 500 45px/45px "Comic Sans MS";
   color: #008080;
   text-shadow: 0 -1px 0 #0cf, 0 1px 0 #00c, 0 0 12px #09f;
+}
+
+.comP {
+  color: #008080;
+}
+
+.comLabel {
+  color: #005b99;
 }

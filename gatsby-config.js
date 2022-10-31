@@ -8,6 +8,8 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-use-dark-mode`,
+    `gatsby-plugin-material-ui`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,

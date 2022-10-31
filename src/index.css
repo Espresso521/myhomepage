@@ -343,3 +343,20 @@
   background-color: plum;
   overflow: auto;
 }
+
+body.light-mode {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #212121;
+  color: #999;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode blockquote {
+  color: #999;
+  border-left: 0.32813rem solid #999;
+}

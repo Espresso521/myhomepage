@@ -4,6 +4,7 @@ import { Divider } from 'antd'
 import {
   CopyrightOutlined,
 } from '@ant-design/icons'
+import DarkModeToggle from "./darkmodetoggle"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -19,6 +20,7 @@ const Layout = ({ location, title, children }) => {
         <Link className="blog-post-about-me" to="/aboutme">
           AboutMe
         </Link>
+        <DarkModeToggle></DarkModeToggle>
       </>
     )
   } else {
