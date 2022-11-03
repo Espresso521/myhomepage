@@ -12,6 +12,8 @@ import {
   SoundTwoTone,
   CommentOutlined,
 } from '@ant-design/icons'
+import AudioPlayer from 'react-h5-audio-player'
+import 'react-h5-audio-player/lib/styles.css'
 
 const columns = [
   {
@@ -104,10 +106,18 @@ const baseinfo = function baseinfo (props) {
       <Divider>
         <Avatar
           alt="Profile Avatar"
-          src="/myself.jpg"
-          size={60}
+          src="/aboutme.jpeg"
+          size={75}
         />
       </Divider>
+      <AudioPlayer
+        autoPlay={true}
+        loop={true}
+        src="/sky.m4a"
+        // other props here
+        showJumpControls={false}
+        layout={'horizontal-reverse'}
+      />
       <div style={{ 'display': 'flex' }}>
         <div style={{ 'marginTop': '5px' }}>
           <Table bordered columns={columns} dataSource={data} size="small" pagination={{
