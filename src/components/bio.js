@@ -19,7 +19,7 @@ const Bio = () => {
         size={75}
       />
       <p>
-        I'm <strong>Hu Ze</strong> from <big>Tokyo</big>
+        I'm <strong>Hu Ze</strong> live in <big>Tokyo</big>
         <br></br>
         <span>
           <i>You can contact me:</i> <a href="mailto:kotaku20220424@gmail.com">My Gmail</a>

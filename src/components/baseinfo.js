@@ -99,7 +99,29 @@ const data = [
   },
 ]
 
-const baseinfo = function baseinfo (props) {
+const playlist = [
+  { src: '/sky.m4a' },
+  { src: '/romantic.m4a' },
+  { src: '/kanon.m4a' },
+]
+
+const Baseinfo = function Baseinfo (props) {
+
+  const [currentTrack, setTrackIndex] = React.useState(0)
+  const handleClickNext = () => {
+    console.log('click next')
+    setTrackIndex((currentTrack) =>
+      currentTrack < playlist.length - 1 ? currentTrack + 1 : 0
+    )
+  }
+
+  const handleEnd = () => {
+    console.log('end')
+    setTrackIndex((currentTrack) =>
+      currentTrack < playlist.length - 1 ? currentTrack + 1 : 0
+    )
+  }
+
   return (
     <div>
       <BackTop />
@@ -110,13 +132,15 @@ const baseinfo = function baseinfo (props) {
           size={75}
         />
       </Divider>
+
       <AudioPlayer
+        volume="0.75"
         autoPlay={true}
-        loop={true}
-        src="/sky.m4a"
-        // other props here
-        showJumpControls={false}
-        layout={'horizontal-reverse'}
+        src={playlist[currentTrack].src}
+        showSkipControls
+        onClickNext={handleClickNext}
+        onEnded={handleEnd}
+      // Try other props!
       />
       <div style={{ 'display': 'flex' }}>
         <div style={{ 'marginTop': '5px' }}>
@@ -129,4 +153,4 @@ const baseinfo = function baseinfo (props) {
   )
 }
 
-export default baseinfo
+export default Baseinfo
