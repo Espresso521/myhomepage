@@ -108,3 +108,5 @@ Here the flow is:
       // ...
 
 > Today is my wife's birthday, and I promise, I love her
+
+Refer to [Javascript.Info](https://javascript.info/promise-chaining) : )
