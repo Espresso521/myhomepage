@@ -102,6 +102,7 @@ const data = [
 const playlist = [
   { src: '/sky.m4a' },
   { src: '/romantic.m4a' },
+  { src: '/Nostalgia.m4a' },
   { src: '/kanon.m4a' },
 ]
 

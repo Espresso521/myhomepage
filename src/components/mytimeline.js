@@ -18,9 +18,10 @@ function mytimeline () {
       <Timeline mode={'right'}>
         <Timeline.Item label={<p className='comLabel'>Now</p>} color="red" dot={<HeartOutlined />}><p className='comP'>Just do IT</p></Timeline.Item>
         <Timeline.Item label={<p className='comLabel'>2022-05</p>} dot={<LaptopOutlined />}><p className='comP'>Join Servicememe</p></Timeline.Item>
-        <Timeline.Item label={<p className='comLabel'>2022-04</p>} dot={<RocketOutlined />}><p className='comP'>Arrive Tokyo</p></Timeline.Item>
+        <Timeline.Item label={<p className='comLabel'>2022-04</p>} dot={<RocketOutlined />}><p className='comP'>Arrived Tokyo</p></Timeline.Item>
         <Timeline.Item color={"green"} dot={<SyncOutlined spin />}><p className='comP'>...</p></Timeline.Item>
-        <Timeline.Item label={<p className='comLabel'>2012-03</p>} dot={<LaptopOutlined />}><p className='comP'>Join VIA Tech</p></Timeline.Item>
+        <Timeline.Item label={<p className='comLabel'>2013-12</p>} dot={<LaptopOutlined />}><p className='comP'>Join VIA Tech</p></Timeline.Item>
+        <Timeline.Item label={<p className='comLabel'>2012-03</p>} dot={<LaptopOutlined />}><p className='comP'>Join O2MICRO</p></Timeline.Item>
         <Timeline.Item color="blue" label={<p className='comLabel'>2012-03</p>} dot={<HomeOutlined />}>
           <Tooltip placement="topLeft" title="HUST === Huazhong University of Science and Technology" color={'cyan'} key={'cyan'}>
             <p className='comP'>Master Graduated from HUST</p>
