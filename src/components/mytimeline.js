@@ -17,7 +17,7 @@ function mytimeline () {
       </Divider>
       <Timeline mode={'right'}>
         <Timeline.Item label={<p className='comLabel'>Now</p>} color="red" dot={<HeartOutlined />}><p className='comP'>Just do IT</p></Timeline.Item>
-        <Timeline.Item label={<p className='comLabel'>2022-05</p>} dot={<LaptopOutlined />}><p className='comP'>Join Servicememe</p></Timeline.Item>
+        {/* <Timeline.Item label={<p className='comLabel'>2022-05</p>} dot={<LaptopOutlined />}><p className='comP'>Join Servicememe</p></Timeline.Item> */}
         <Timeline.Item label={<p className='comLabel'>2022-04</p>} dot={<RocketOutlined />}><p className='comP'>Arrived Tokyo</p></Timeline.Item>
         <Timeline.Item color={"green"} dot={<SyncOutlined spin />}><p className='comP'>...</p></Timeline.Item>
         <Timeline.Item label={<p className='comLabel'>2013-12</p>} dot={<LaptopOutlined />}><p className='comP'>Join VIA Tech</p></Timeline.Item>

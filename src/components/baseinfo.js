@@ -100,19 +100,24 @@ const data = [
 ]
 
 const playlist = [
+  { src: '/myson.m4a' },
   { src: '/sky.m4a' },
   { src: '/romantic.m4a' },
   { src: '/Nostalgia.m4a' },
-  { src: '/kanon.m4a' },
 ]
 
 const Baseinfo = function Baseinfo (props) {
 
   const [currentTrack, setTrackIndex] = React.useState(0)
   const handleClickNext = () => {
-    console.log('click next')
     setTrackIndex((currentTrack) =>
       currentTrack < playlist.length - 1 ? currentTrack + 1 : 0
+    )
+  }
+
+  const handleClickPre = () => {
+    setTrackIndex((currentTrack) =>
+      currentTrack == 0 ? playlist.length - 1 : currentTrack - 1
     )
   }
 
@@ -135,11 +140,12 @@ const Baseinfo = function Baseinfo (props) {
       </Divider>
 
       <AudioPlayer
-        volume="0.75"
+        volume="0.5"
         autoPlay={true}
         src={playlist[currentTrack].src}
         showSkipControls
         onClickNext={handleClickNext}
+        onClickPrevious={handleClickPre}
         onEnded={handleEnd}
       // Try other props!
       />
