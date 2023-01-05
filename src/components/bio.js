@@ -13,19 +13,23 @@ const Bio = () => {
   return (
     <div className="bio">
       <Avatar
-        style={{ 'marginRight': '10px', 'marginTop': '5px' }}
+        style={{ 'marginRight': '11px', 'marginTop': '15px' }}
         alt="Profile Avatar"
         src="/myself.jpg"
-        size={75}
+        size={110}
       />
       <p>
         I'm <strong>Hu Ze</strong> live in <big>Tokyo</big>
         <br></br>
+        Clone my website: <a href="https://github.com/Espresso521">GitHub</a><br></br>
         <span>
-          <i>You can contact me:</i> <a href="mailto:kotaku20220424@gmail.com">My Gmail</a>
+          <i>Contact me:</i> <a href="mailto:kotaku20220424@gmail.com">My Gmail</a>
         </span><br></br>
         <span>
-          <i>You can chat to me:</i> <a href="/chattome">ChatRoom</a>
+          <i>Chat to me:</i> <a href="/chattome">ChatRoom</a>
+        </span><br></br>
+        <span>
+          <i>My Hope:</i> <a href="https://www.jw.org/cmn-hans/"><img src="/bible-solid.png"></img></a>
         </span>
       </p>
 

@@ -100,10 +100,10 @@ const data = [
 ]
 
 const playlist = [
-  { src: '/myson.m4a' },
-  { src: '/sky.m4a' },
-  { src: '/romantic.m4a' },
   { src: '/Nostalgia.m4a' },
+  { src: '/romantic.m4a' },
+  { src: '/sky.m4a' },
+  { src: '/myson.m4a' },
 ]
 
 const Baseinfo = function Baseinfo (props) {
