@@ -29,7 +29,7 @@ const Bio = () => {
           <i>Chat to me:</i> <a href="/chattome">ChatRoom</a>
         </span><br></br>
         <span>
-          <i>My Hope:</i> <a href="https://www.jw.org/cmn-hans/"><img src="/bible-solid.png"></img></a>
+          <a href="https://www.jw.org/"><img src="/bible-solid.png"></img></a>
         </span>
       </p>
 
