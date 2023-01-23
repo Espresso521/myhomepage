@@ -26,6 +26,12 @@ function certification () {
           height={250}
           src="/n2.jpg"
         />
+
+        <Image
+          width={250}
+          height={250}
+          src="/n1result.png"
+        />
       </Image.PreviewGroup>
 
     </div>

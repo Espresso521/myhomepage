@@ -93,7 +93,7 @@ const data = [
     age: 39,
     address: 'Tokyo',
     education: 'Master',
-    languages: ['Native Chinese', 'CET-6 English', 'N2 Japanese'],
+    languages: ['Native Chinese', 'CET-6 English', 'N1/N2 Japanese'],
     tags: ['GO', 'C/C++', 'Java', 'React', 'Kotlin', 'Android', 'AWS SAA', 'SpringBoot', 'IRIS Core Develop'],
     technicals: ['SIP', 'RTP', 'H264', 'AAC', 'G711', 'RTSP', 'FFmpeg', 'MediaCodec'],
   },
