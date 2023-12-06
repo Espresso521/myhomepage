@@ -21,7 +21,7 @@ A demo app like the With APP
 
 ✨ 🇺🇸 I believe my passion for Android development, combined with my technical expertise, makes me an ideal candidate for the role of an Android Senior Engineer
 
-# 基本情報
+<!-- # 基本情報
 
 <table>
   <tr>
@@ -84,8 +84,25 @@ A demo app like the With APP
     <td>タバコ</td>
     <td style="text-align:center;">吸わない</td>
   </tr>
-</table>
+</table> -->
 
+# 基本情報
+|  |  |  
+| --- | --- |  
+| ニックネーム | Espresso521 |  
+| 年齢 | 40歳 |  
+| 血液型 | O型 |  
+| 移住地 | 東京 |  
+| 出身地 | 中国 |  
+| 学歴 | 大学院卒 |  
+| 職種 | IT |  
+| 年収 | 800万円以上 |  
+| 身長 | 175cm |  
+| 体型 | 普通 |  
+| 出会うまでの希望 | 気が合えば会いたい |  
+| 休日 | 土日 |  
+| お酒 | 時々飲む |  
+| タバコ | 吸わない |  
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
