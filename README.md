@@ -1,3 +1,41 @@
+# LikeWith
+A demo app like the With APP
+
+# 自己紹介文
+初めまして、コタクと申します。中国出身で、中国の武漢の華中科技（かちゅうかぎ）大学を卒業しました。　　
+
+卒業以来、ソフトウェア開発に携わって（たずさわって）きました。 アンドロイドアプリ開発が得意です。　　
+
+去年の四月に来日し、その後日本でもアンドロイドアプリ開発を中心に経験をしてきました。　　
+
+また僕は日本語能力試験N1とAWS SAAの資格試験に合格しました。　　
+
+どうぞよろしくお願いします。　　
+
+[my blog address](https://www.kotaku-blog.com/)
+
+✨ 🇯🇵 私はプログラミングは大好きですし、1人称で自走できるし、やる気が満々です　　
+
+✨ 🇺🇸 I believe my passion for Android development, combined with my technical expertise, makes me an ideal candidate for the role of an Android Senior Engineer
+
+# 基本情報
+|  |  |
+| --- | --- |
+| ニックネーム | Espresso521 |
+| 年齢 | 40歳 |
+| 血液型 | O型 |
+| 移住地 | 東京 |
+| 出身地 | 中国 |
+| 学歴 | 大学院卒 |
+| 職種 | IT |
+| 年収 | 800万円以上 |
+| 身長 | 175cm |
+| 体型 | 普通 |
+| 出会うまでの希望 | 気が合えば会いたい |
+| 休日 | 土日 |
+| お酒 | 時々飲む |
+| タバコ | 吸わない |
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
