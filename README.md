@@ -1,3 +1,109 @@
+# LikeWith
+A demo app like the With APP
+
+# 自己紹介文 
+
+#### 初めまして、コタクと申します。  
+
+#### 中国出身で、中国の武漢の華中科技（かちゅうかぎ）大学を卒業しました。　　
+
+#### 卒業以来、ソフトウェア開発に携わって（たずさわって）きました。 アンドロイドアプリ開発が得意です。　　
+
+#### 去年の四月に来日し、その後日本でもアンドロイドアプリ開発を中心に経験をしてきました。　　
+
+#### また僕は日本語能力試験N1とAWS SAAの資格試験に合格しました。　　
+
+#### どうぞよろしくお願いします。　　
+
+#### 🎏 [my blog address](https://www.kotaku-blog.com/)
+
+✨ 🇯🇵 私はプログラミングは大好きですし、1人称で自走できるし、やる気が満々です　　
+
+✨ 🇺🇸 I believe my passion for Android development, combined with my technical expertise, makes me an ideal candidate for the role of an Android Senior Engineer
+
+<!-- # 基本情報
+
+<table>
+  <tr>
+    <td>ニックネーム</td>
+    <td style="text-align:center;">Espresso521</td>
+  </tr>
+  <tr>
+    <td>年齢</td>
+    <td style="text-align:center;">40歳</td>
+  </tr>
+  <tr>
+    <td>血液型</td>
+    <td style="text-align:center;">O型</td>
+  </tr>
+  <tr>
+    <td>移住地</td>
+    <td style="text-align:center;">東京</td>
+  </tr>
+  <tr>
+    <td>出身地</td>
+    <td style="text-align:center;">中国</td>
+  </tr>
+  <tr>
+    <td>学歴</td>
+    <td style="text-align:center;">大学院卒</td>
+  </tr>
+    <tr>
+    <td>職種</td>
+    <td style="text-align:center;">IT</td>
+  </tr>
+  <tr>
+    <td>年収</td>
+    <td style="text-align:center;">800万円以上</td>
+  </tr>
+  <tr>
+    <td>身長</td>
+    <td style="text-align:center;">175cm</td>
+  </tr>
+    <tr>
+    <td>体型</td>
+    <td style="text-align:center;">普通</td>
+  </tr>
+  <tr>
+    <td>出会うまでの希望</td>
+    <td style="text-align:center;">気が合えば会いたい</td>
+  </tr>
+  <tr>
+    <td>休日</td>
+    <td style="text-align:center;">土日</td>
+  </tr>
+  <tr>
+    <td>お酒</td>
+    <td style="text-align:center;">時々飲む</td>
+  </tr>
+  <tr>
+    <td>年齢</td>
+    <td style="text-align:center;">40歳</td>
+  </tr>
+  <tr>
+    <td>タバコ</td>
+    <td style="text-align:center;">吸わない</td>
+  </tr>
+</table> -->
+
+# 基本情報
+|  |  |  
+| --- | --- |  
+| ニックネーム | Espresso521 |  
+| 年齢 | 40歳 |  
+| 血液型 | O型 |  
+| 移住地 | 東京 |  
+| 出身地 | 中国 |  
+| 学歴 | 大学院卒 |  
+| 職種 | IT |  
+| 年収 | 800万円以上 |  
+| 身長 | 175cm |  
+| 体型 | 普通 |  
+| 出会うまでの希望 | 気が合えば会いたい |  
+| 休日 | 土日 |  
+| お酒 | 時々飲む |  
+| タバコ | 吸わない |  
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
