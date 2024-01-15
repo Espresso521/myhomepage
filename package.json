@@ -15,6 +15,7 @@
     "@mui/styled-engine": "^5.10.8",
     "antd": "^4.23.3",
     "aws-sdk": "^2.1230.0",
+    "caniuse-lite": "^1.0.30001576",
     "gatsby": "^4.23.1",
     "gatsby-plugin-feed": "^4.23.1",
     "gatsby-plugin-google-gtag": "^4.24.0",
