@@ -36,7 +36,7 @@ description: "浏览了一下手机照片，选一些保存到博客里。"
   Your browser does not support the video tag.
 </video>  
 
-> 过年小插曲，老婆手指受伤，第一叫救护车。  
+> 过年小插曲，老婆手指受伤，第一次叫救护车。  
 > ![9](./2.jpg)   
 > ![10](./1.jpg)  
 
