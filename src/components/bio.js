@@ -30,6 +30,7 @@ const Bio = () => {
         </span><br></br>
         <span>
           <a href="https://www.jw.org/"><img src="/bible-solid.png"></img></a>
+          <a href="https://archbase.co.jp/"><img src="/company_solid.png"></img></a>
         </span>
       </p>
 
